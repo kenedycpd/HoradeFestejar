@@ -1,0 +1,1 @@
+web: gunicorn celebrar.wsgi --log-file -
