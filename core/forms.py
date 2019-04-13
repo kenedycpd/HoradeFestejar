@@ -1,5 +1,5 @@
-from django import ModelForm
-from cliente.models import *
+from django.forms import ModelForm
+from cliente.models import Evento
 
 class EventoForm(ModelForm):
 	class Meta:
