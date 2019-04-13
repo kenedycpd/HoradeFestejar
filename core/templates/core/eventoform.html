@@ -1,12 +1,16 @@
 {% extends "base.html" %}
+{% load widget_tweaks %}
 {% block body %}
+<br>
+<br>
 	<div class="form">
 		<form method="post">
 			{% csrf_token %}
 			<div class="row">
 				<div class="col-md-6">
-					<div>
-						
+					<div class="form-group">
+						<label for="{{form.pessoas.id_for_label}}">evento é para quantas pessoas ?:</label>
+						{{form.pessoas|add_class:"form-control"}}
 					</div>
 				</div>
 			</div>
