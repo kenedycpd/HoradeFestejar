@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from cliente.models import Evento
 from .forms import EventoForm
 

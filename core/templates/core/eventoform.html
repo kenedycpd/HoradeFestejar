@@ -35,7 +35,67 @@ Ao final, te enviaremos sugestões de serviços junto com o orçamento.</p>
 						{{form.hora_fim|add_class:"form-control"|attr:"placeholder:Ex: 21:00"}}
 					</div>
 				</div>
+				<h3 style="color:#ee0979;">Qual será a agenda do seu evento? Que horas cada atividade vai começar e terminar? Preencha abaixo:</h3>
+				<br>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.atividade.id_for_label}}">Atividades: *</label>
+						{{form.atividade|add_class:"form-control"|attr:"placeholder:Ex: Palestra"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.inicio.id_for_label}}">inicio da atividade: *</label>
+						{{form.inicio|add_class:"form-control"|attr:"placeholder:Ex: 19:00"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.fim.id_for_label}}">fim da atividade: *</label>
+						{{form.fim|add_class:"form-control"|attr:"placeholder:Ex: 00:00"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.nome.id_for_label}}">Nome do local: *</label>
+						{{form.nome|add_class:"form-control"|attr:"placeholder:Ex: Escreva"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.endereco.id_for_label}}">Digite Endereço: *</label>
+						{{form.endereco|add_class:"form-control"|attr:"placeholder:Ex: Escreva"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.obs.id_for_label}}">Observações: *</label>
+						{{form.obs|add_class:"form-control"|attr:"placeholder:Ex: O que é mais importante para o evento ?"}}
+					</div>
+				</div>
+				<h3 style="color:#17a2b8;">Por favor, me informe seu contato de preferência:</h3>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.cliente.id_for_label}}">Nome: *</label>
+						{{form.cliente|add_class:"form-control"|attr:"placeholder:Ex: Escreva"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.email.id_for_label}}">E-mail: *</label>
+						{{form.email|add_class:"form-control"|attr:"placeholder:Ex: email@email.com"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.phone.id_for_label}}">Telefone: *</label>
+						{{form.phone|add_class:"form-control"|attr:"placeholder:Ex: (00)00000-0000"}}
+					</div>
+				</div>
 			</div>
+			<a href="{% url 'evento' %}" class="btn btn-info btn-xl rounded-pill mt-5">enviar solicitação</a>
+			<br>
+			<br>
 		</form>
 	</div>
 {% endblock body %}
