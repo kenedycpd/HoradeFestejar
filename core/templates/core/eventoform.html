@@ -3,14 +3,36 @@
 {% block body %}
 <br>
 <br>
+<h3>Assistente Virtual</h3>
+<p>Oi! Vou te fazer umas perguntas para saber mais sobre o seu evento.
+Ao final, te enviaremos sugestões de serviços junto com o orçamento.</p>
+<br>
 	<div class="form">
 		<form method="post">
 			{% csrf_token %}
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label for="{{form.pessoas.id_for_label}}">evento é para quantas pessoas ?:</label>
-						{{form.pessoas|add_class:"form-control"}}
+						<label for="{{form.data.id_for_label}}">evento é para quantas pessoas ?: *</label>
+						{{form.data|add_class:"form-control"|attr:"placeholder:O seu evento é para quantas pessoas ?"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.pessoas.id_for_label}}">Digite a data do seu evento: *</label>
+						{{form.pessoas|add_class:"form-control"|attr:"placeholder:Quando é seu evento ? "}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.hora_inicio.id_for_label}}">Hora de início do evento: *</label>
+						{{form.hora_inicio|add_class:"form-control"|attr:"placeholder:Ex: 15:00"}}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="{{form.hora_fim.id_for_label}}">Hora do fim do evento: *</label>
+						{{form.hora_fim|add_class:"form-control"|attr:"placeholder:Ex: 21:00"}}
 					</div>
 				</div>
 			</div>
