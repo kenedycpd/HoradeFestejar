@@ -3,12 +3,12 @@ from django.db import models
 
 class Evento(models.Model):
 	pessoas = models.IntegerField('Quantas Pessoas')
-	data = models.DateField('Data Evento')
-	hora_inicio = models.TimeField('Inico Evento')
-	hora_fim = models.TimeField('Fim Evento')
+	data = models.CharField('Data Evento',max_length=50)
+	hora_inicio = models.TimeField('Inico Evento',max_length=50)
+	hora_fim = models.TimeField('Fim Evento',max_length=50)
 	atividade = models.CharField('Atividades', max_length=200)
-	inicio = models.DateField('Inicio',null=True,blank=True)
-	fim = models.DateField('Fim',null=True,blank=True)
+	inicio = models.CharField('Inicio',null=True,blank=True,max_length=50)
+	fim = models.CharField('Fim',null=True,blank=True,max_length=50)
 	nome = models.CharField('Nome do Local', max_length=150)
 	endereco = models.CharField('Endereço', max_length=150)
 	obs = models.TextField('Observação')
