@@ -11,7 +11,7 @@ class Evento(models.Model):
 	fim = models.CharField('Fim',null=True,blank=True,max_length=50)
 	nome = models.CharField('Nome do Local', max_length=150)
 	endereco = models.CharField('Endereço', max_length=150)
-	obs = models.TextField('Observação')
+	obs = models.CharField('Observação',max_length=200)
 	cliente = models.CharField('Nome', max_length=100,null=True)
 	email = models.EmailField('E-mail')
 	phone = models.CharField('Telefone', max_length=11)
