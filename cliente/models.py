@@ -15,7 +15,8 @@ class Evento(models.Model):
 	cliente = models.CharField('Nome', max_length=100,null=True)
 	email = models.EmailField('E-mail')
 	phone = models.CharField('Telefone', max_length=15)
-
+	cpf = models.CharField('CPF', max_length=15)
+	
 	class Meta:
 		verbose_name_plural = 'Evento'
 		verbose_name = 'Evento'
