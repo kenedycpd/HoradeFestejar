@@ -19,7 +19,7 @@ def evento(request):
 
 def servico(request):
 	if request.method == 'POST':
-		form = EmpresaForm(request.POSt)
+		form = EmpresaForm(request.POST)
 		if form.is_valid():
 			form.save()
 			return redirect('home')
