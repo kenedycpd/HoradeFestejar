@@ -4,7 +4,7 @@ from django.db import models
 class Empresa(models.Model):
 	nome = models.CharField('Nome da Empresa', max_length=100)
 	cnpj = models.CharField('CNPJ', max_length=100)
-	telefone = models.CharField('Telefone', max_length=10)
+	telefone = models.CharField('Telefone', max_length=15)
 	email = models.EmailField('E-mail')
 	endereco = models.CharField('Endereço', max_length=100)
 	numero = models.CharField('Numero', max_length=4)
