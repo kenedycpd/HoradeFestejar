@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load staticfiles %}
 {% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,6 +51,7 @@
         <input type="password" id="password" name="password" class="form-control" placeholder="senha" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
         <a href="{% url 'add_user' %}" class="btn btn-lg btn-info btn-block">não tem cadastro ?</button></a>
+        <a href="{% url 'home' %}" class="btn btn-lg btn-success btn-block">voltar para plataforma</button></a>
         
       </form>
 

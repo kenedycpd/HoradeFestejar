@@ -45,12 +45,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-top-links">
         <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-        {%if user.is_authenticated%}<b style="color:#fff">{{user.get_full_name}}</b>{%endif%}<b class="caret"></b>
+        <a class="dropdown-toggle" data-toggle="dropdown"> 
+        {%if user.is_authenticated%}<b style="color:#fff">{{user.get_full_name}}</b>{%endif%}
         </a>
         <ul class="dropdown-menu dropdown-user">
-        <li class="divider"></li>
-        <li><a href="/">Sair</a>
+        <li><a href="{% url 'user_login' %}"> Sair da Conta </a>
         </li>
         </ul>
         </li>

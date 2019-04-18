@@ -22,7 +22,7 @@ def user_login(request):
 		user = authenticate(username=username, password=password)
 		if user:
 			login(request,user)
-			return redirect('servico')
+			return redirect('home')
 		else:
 			messages.error(request, 'usuário ou senha invalidos!')
 	return render(request, 'accounts/login.html')
