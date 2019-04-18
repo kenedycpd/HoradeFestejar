@@ -43,18 +43,30 @@
             <a class="nav-link" href="{% url 'user_login' %}">Empresa</a>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right navbar-top-links">
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
+        {%if user.is_authenticated%}<b style="color:#fff">{{user.get_full_name}}</b>{%endif%}<b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+        <li class="divider"></li>
+        <li><a href="/">Sair</a>
+        </li>
+        </ul>
+        </li>
+        </ul>
       </div>
     </div>
+    
   </nav>
-
+  
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
         <h1 class="masthead-heading mb-0">Você faz o evento que você quiser</h1>
         <h2 class="masthead-subheading mb-0">Plataforma para contratação
         de profissionais de serviços para eventos</h2>
-        <a href="{% url 'user_login' %}" class="btn btn-primary btn-xl rounded-pill mt-5">Oferecer Serviços</a>
-        <a href="{% url 'evento' %}" class="btn btn-info btn-xl rounded-pill mt-5">Contratar Serviços</a>
+        
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>

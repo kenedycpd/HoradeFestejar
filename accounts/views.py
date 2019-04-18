@@ -26,3 +26,7 @@ def user_login(request):
 		else:
 			messages.error(request, 'usuário ou senha invalidos!')
 	return render(request, 'accounts/login.html')
+
+def logout_user(request):
+	logout(request)
+	return redirect('user_login')
